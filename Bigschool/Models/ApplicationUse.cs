@@ -17,5 +17,5 @@ namespace Bigschool.Models
             return userIdentity;
         }
     }
-
+    
 }
