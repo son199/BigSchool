@@ -214,9 +214,18 @@
     <Compile Include="Migrations\201903260319133_PopulateCategoryTable.Designer.cs">
       <DependentUpon>201903260319133_PopulateCategoryTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904020258370_AddNameColumnToApplicationUser.cs" />
+    <Compile Include="Migrations\201904020258370_AddNameColumnToApplicationUser.Designer.cs">
+      <DependentUpon>201904020258370_AddNameColumnToApplicationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904020411300_AddAttendance.cs" />
+    <Compile Include="Migrations\201904020411300_AddAttendance.Designer.cs">
+      <DependentUpon>201904020411300_AddAttendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Attendance.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\ApplicationUse.cs" />
@@ -306,6 +315,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903260319133_PopulateCategoryTable.resx">
       <DependentUpon>201903260319133_PopulateCategoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904020258370_AddNameColumnToApplicationUser.resx">
+      <DependentUpon>201904020258370_AddNameColumnToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904020411300_AddAttendance.resx">
+      <DependentUpon>201904020411300_AddAttendance.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

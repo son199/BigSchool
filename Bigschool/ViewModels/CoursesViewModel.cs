@@ -10,7 +10,7 @@ namespace Bigschool.ViewModels
     public class CoursesViewModel
     {
         [Required]
-        [FutureDate]
+       
         public string Place { get; set; }
         [Required]
         [FutureDate]
