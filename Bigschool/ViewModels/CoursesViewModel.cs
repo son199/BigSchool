@@ -2,13 +2,17 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Bigschool.ViewModels
 {
     public class CoursesViewModel
     {
+        public IEnumerable<Course> UpCommingCourses { get; set; }
+        public bool ShowAction { get; set; }
         [Required]
        
         public string Place { get; set; }
@@ -25,5 +29,7 @@ namespace Bigschool.ViewModels
             return DateTime.Parse(string.Format("{0},{1}", Date, Time));
 
         }
+       
+
     }
 }

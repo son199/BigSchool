@@ -11,7 +11,7 @@ namespace Bigschool.Models
     {
         [Key]
         [Column(Order = 1)]
-        public int FollowerId { get; set; }
+        public string FollowerId { get; set; }
        
         [Key]
         [Column(Order = 2)]

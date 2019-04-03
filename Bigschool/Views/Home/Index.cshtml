@@ -1,10 +1,10 @@
 ﻿
+
+
 @model IEnumerable<Bigschool.Models.Course>
 @{
     ViewBag.Title = "Home Page";
 }
-
-
     @foreach (var course in Model)
     {
         <li>
@@ -20,19 +20,26 @@
             <div class="details">
                 <span class="lecturer">
                     @course.Lecturer.Name
+
+                    <button class="btn btn-default btn-sm js-toggle-attendance" data-course-id="@course.LecturerId">Follow?</button>
+
                 </span>
                 <span class="category">
                     @course.Category.Name
                 </span>
-                <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance" >Going?</button>
+
+
+                <button data-course-id="@course.Id" class="btn btn-default btn-sm js-toggle-attendance">Going?</button>
+
             </div>
+
         </li>
     }
 @section scripts
 {
     <script>
         $(document).ready(function () {
-            $("js-toggle-attendance").click(function (e){
+            $("js-toggle-attendance").click(function (e) {
                 var button = $(e.target);
                 $.post("/api/attendances", { courseId: button.attr("data-course-id") })
                     .done(function () {
@@ -44,8 +51,16 @@
                         alert("Somthing failed");
                     });
             });
-         });
+            $("js-toggle-attendance").click(function (e) {
+                var button = $(e.target);
+                $.post("/api/followings", { followeeId: button.attr("data-user-id") })
+                    .done(function () {
+                        button.text("Following");
+                    })
+                    .fail(function () {
+                        alert("Somthing failed");
+                    });
     </script>
-    }
+}
 
 
